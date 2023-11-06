@@ -1,9 +1,11 @@
 <template>
+  <TodoHeader />
   <RouterView></RouterView>
 </template>
 
 <script setup>
 import { RouterView } from "vue-router";
+import TodoHeader from "./components/TodoHeader.vue";
 </script>
 
 <style lang="scss">
@@ -19,5 +21,6 @@ import { RouterView } from "vue-router";
 .container {
   max-width: 1100px;
   margin: 0 auto;
+  padding: 0 110px;
 }
 </style>
