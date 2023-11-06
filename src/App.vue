@@ -1,9 +1,9 @@
 <template>
-  <div>Hello World!</div>
+  <RouterView></RouterView>
 </template>
 
-<script>
-export default {};
+<script setup>
+import { RouterView } from "vue-router";
 </script>
 
-<style lang="scss" scoped></style>
+<style></style>
