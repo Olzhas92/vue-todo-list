@@ -31,6 +31,12 @@
   button {
     padding: 8px 16px;
     border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: lightcoral;
+      color: #fff;
+    }
   }
 }
 </style>
