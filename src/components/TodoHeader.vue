@@ -36,8 +36,9 @@ header {
       gap: 16px;
       text-decoration: none;
       color: #000000;
+
       img {
-        width: 24px;
+        max-width: 48px;
         height: auto;
         cursor: pointer;
       }

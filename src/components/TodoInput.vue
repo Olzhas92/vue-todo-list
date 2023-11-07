@@ -1,11 +1,19 @@
 <template>
   <div class="form">
-    <input type="text" placeholder="Add ToDo" />
-    <button>Create</button>
+    <input type="text" placeholder="Add ToDo" v-model="todo" />
+    <button @click="createTodo">Create</button>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+const todo = ref("");
+console.log(todo);
+
+function createTodo() {
+  console.log(todo.value);
+}
+</script>
 
 <style lang="scss" scoped>
 .form {
