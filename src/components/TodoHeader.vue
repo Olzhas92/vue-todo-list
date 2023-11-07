@@ -1,15 +1,15 @@
 <template>
   <header>
-    <nav class="header">
-      <RouterLink to="/" class="header__branding">
+    <nav class="container">
+      <RouterLink to="/" class="container__branding">
         <img src="../assets/to-do-list.png" />
         <h1>ToDo List</h1>
       </RouterLink>
-      <ul class="header__nav-routes">
-        <li class="header__nav-routes--home">
+      <ul class="container__nav-routes">
+        <li class="container__nav-routes--home">
           <RouterLink to="/">Home</RouterLink>
         </li>
-        <li class="header__nav-routes--about">
+        <li class="container__nav-routes--about">
           <RouterLink to="/about">About</RouterLink>
         </li>
       </ul>
@@ -25,19 +25,15 @@ import { RouterLink } from "vue-router";
 header {
   background-color: lightcoral;
 
-  .header {
+  .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 16px 110px;
+    padding: 25px 16px;
 
     &__branding {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
       gap: 16px;
-      width: 30%;
       text-decoration: none;
       color: #000000;
       img {
@@ -54,9 +50,11 @@ header {
 
     &__nav-routes {
       display: flex;
+      flex: 1;
       align-items: center;
-      justify-content: space-between;
-      width: 20%;
+      justify-content: flex-end;
+      gap: 16px;
+
       list-style: none;
       text-decoration: none;
       &--home,
