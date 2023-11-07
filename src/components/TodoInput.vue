@@ -6,13 +6,19 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, defineEmits } from "vue";
 const todo = ref("");
-console.log(todo);
 
-function createTodo() {
-  console.log(todo.value);
-}
+const emit = defineEmits(["emitTodo"]);
+
+const createTodo = () => {
+  if (!todo.value) {
+    console.log("no todo");
+    return;
+  } else {
+    emit("emitTodo", todo.value);
+  }
+};
 </script>
 
 <style lang="scss" scoped>

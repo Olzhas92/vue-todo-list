@@ -1,12 +1,30 @@
 <template>
   <main>
     <h2>Create ToDo</h2>
-    <TodoInput />
+    <TodoInput @emitTodo="createTodo" />
   </main>
 </template>
 
 <script setup>
+import { ref } from "vue";
+import { uid } from "uid";
 import TodoInput from "../components/TodoInput.vue";
+
+const todoList = ref([]);
+// const newTodo = ref("");
+
+const createTodo = (todo) => {
+  const todoItem = {
+    id: uid(),
+    todo,
+    isCompleted: null,
+    isEditing: null,
+  };
+  console.log(todoItem);
+  todoList.value.push(todoItem);
+  // newTodo.value = todo;
+  // console.log("this is newTodo from the parent", newTodo.value);
+};
 </script>
 
 <style lang="scss" scoped>
